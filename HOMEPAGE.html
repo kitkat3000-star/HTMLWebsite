@@ -1,0 +1,424 @@
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<head>
+
+<style>
+.container {
+position: relative;
+text-align: center;
+color: white;
+}
+
+.top-left {
+position: fixed;
+top: 8px;
+left: 16px;
+}
+
+.center {
+position: absolute;
+top: 65%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.aboutbox{
+font-family:"Raleway", sans-serif;
+font-size:20;
+background-color: lavenderblush;
+width: 100%;
+height: 80%;
+padding: 15px;
+background-color: black;
+opacity: 0.9;
+color: white;
+box-shadow: 10px 10px 5px grey;
+}
+
+.para
+{
+font-style: italic;
+}
+
+.webheading
+{
+background-color:black; 
+color:white; 
+font-family: Raleway, sans-serif; 
+opacity: 0.8; 
+font-size:40; 
+size:20px;
+}
+
+.workpara
+{
+font-family: Raleway, sans-serif; 
+font-size:25; 
+}
+	
+.container1 {
+position: relative;
+
+}
+
+.center1{
+position: absolute;
+top: 15%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 80%;
+height: 20%;
+}
+
+.portbg{
+width: 80%;
+height: 15%;
+position: absolute;
+top: 30%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: black;
+opacity: 0.8; 
+}
+
+div.gallery {
+margin: 5px;
+border: 1px solid #ccc;
+float: left;
+position: relative;
+right: -20%; 
+width: 180px;
+}
+
+div.gallery:hover {
+border: 1px solid #777;
+}
+
+div.gallery img {
+width: 100%;
+height: auto;
+}
+
+div.desc {
+padding: 13px;
+text-align: center; 
+fon-size: 10;
+}
+
+.portinfo{
+position: absolute; 
+top: 15%; 
+width: 90%;
+justify-content: space-between;
+height: 290%;
+left: 10%; 
+color:white; 
+font-size: 20; 
+font-style: italic; 
+font-family: Lato;
+}
+
+.mapouter{
+position:relative;
+text-align:right;
+height:400px;
+width:400px;
+}
+
+.gmap_canvas{
+overflow:hidden;
+background:none!important;
+height:300px;
+width:300px;
+}
+
+.overlay {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0, 0.9);
+overflow-x: hidden;
+transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+</style>
+</head>
+	  
+<body>
+
+<div id="myNav" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<div class="overlay-content">
+		<a href="./assignment3Coding.html">Coding</a>
+		<a href="./assignment3myart.html">My Art</a>
+		<a href="./assignment3Sports.html">Sports</a>
+		<a href="./assignment3bookseries.html">Books,Movies & Series </a>
+		<a href="./Assignment3resume.xml">Resume</a>
+		<a href="./assignment3myMap.html">Map & Comments</a>
+	</div>
+</div>
+
+<div id="myNav1" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+	<div class="overlay-content">
+		<a href="./Assignment3snake.html">SNAKE</a>
+		<a href="./Assignment3obstacle.html">OBSTACLE</a>
+		<a href="./assignmenr3mygame.html">NUMBER GAME</a>
+		<a href="https://www.htmlgames.com/">MORE GAMES!!</a>
+	</div>
+</div>
+
+<div class="container" id="home">
+	<img src = "http://getwallpapers.com/wallpaper/full/4/a/2/431206.jpg"  width="100%" height="85%" />
+	<div class="top-left">
+		<a href="#home" class="w3-bar-item w3-button" ><i class="fa fa-fw fa-home"></i> HOME </a> &nbsp;
+		<a href="#about"class="w3-bar-item w3-button w3-hide-small"> <i class="fa fa-user"></i> ABOUT </a> &nbsp;
+		<a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO </a> &nbsp;
+		<a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT </a>
+		<a href="#mylist" class="w3-bar-item w3-button w3-hide-small"><span onclick="openNav()">MYLIST</span> </a>
+		<a href="#Play" class="w3-bar-item w3-button w3-hide-small"><span onclick="openNav1()">PLAY! </span></a>
+	</div>
+	
+	<div class="center">
+		<div class="webheading"> 
+			WELCOME TO MY HTML WEBSITE
+		</div>
+	</div>
+</div>
+
+<div class="container1">
+	<img src="https://i.pinimg.com/originals/72/a1/84/72a184aa7846cad0d5a82cf55dc3f406.jpg" width="100%" height="270%" style="opacity: 0.5;" />  
+	<div class="center1">
+		<div class="aboutbox" id="about">
+			<img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/f9/81/5e/breakfast-by-the-beach.jpg" align="left" width="33%" height="95%"/>
+			<h2 align="center"><b>ABOUT ME</b></h2>    
+			<p> <span class="para">Hey its Himaja! </span>  Welcome to my website. I am a student, enrolled in University Of Wollongong, Dubai. Currently pursuing
+			a degree in Bachelors Of Information Technology: Management Information Systems. I enjoy a variety of hobbies including sports, dancing and art. 
+			This Website is made using HTML, XML and CSS. This is a portfolio website which tells a little about me!</p>
+		    <span class="w3-padding-large w3-right" style="background-color: white; color: black;"><b>Comments</b> <span class="w3-tag">0</span></span>
+		</div>
+	</div>
+	
+	<div class="portfolioo">
+		<div class="portbg" id="portfolio"> <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<span class="portinfo"> FRIENDS &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; FAMILY &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; HOBBIES &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; UNIVERSITY &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; DUBAI  <br/>
+				<img src="https://thumbs.dreamstime.com/b/friends-icon-vector-illustration-isolated-white-background-friendship-sign-best-friend-symbol-159018104.jpg" position="absolute" top="10px" width="8%" height="8%"/> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+				<img src="https://media.istockphoto.com/vectors/parents-with-a-child-icon-on-black-background-vector-id1126746772?k=6&m=1126746772&s=170667a&w=0&h=199S0wz3dwzW3VAQHcZrtUldtw6zgSVAeZePfLWwUWo=" width="8%" height="8%"/> &emsp;&emsp;&emsp;&emsp;&emsp;
+				<img src="https://previews.123rf.com/images/hvostik/hvostik1511/hvostik151100195/48619772-set-black-icons-sports-vector-illustration.jpg" width="8.5%" height="8.5%"/> &emsp;&emsp;&emsp;&emsp;&emsp;
+				<img src="https://ak9.picdn.net/shutterstock/videos/1021814659/thumb/10.jpg" width="14%" height="14%"/> &emsp;&emsp;&emsp;&emsp;
+				<img src="https://b.kisscc0.com/20180612/epq/kisscc0-burj-khalifa-skyscraper-architecture-sky-city-buil-life-5b1fb2b0be2243.5360883215288040167788.jpg" width="7%" height="7%"/> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			</span>
+			<img src="http://klavazykova.ca/wp-content/uploads/2018/04/ottawa-makeup-artist-calligraphy-font-modern-design-portfolio.png" align="center" width ="100%" height="200%"/><br/><br/> 
+			<h2 align="center"> MY WORK </h2>  
+			<p align="center" class="workpara"> Here are some glimpses of my life </p>
+			
+			<div class="gallery" >
+				<a target="_blank" href="pic5.jpeg">
+					<img src="pic5.jpeg" alt="marshalling">
+				</a>
+				<div class="desc">Marshalling for graduation ceremony</div>
+			</div>
+
+			<div class="gallery">
+				<a target="_blank" href="pic2.jpeg">
+					<img src="pic2.jpeg" alt="MCF2018" >
+				</a>
+			<div class="desc">MCF 2018</div>
+			</div>
+
+			<div class="gallery">
+				<a target="_blank" href="pic3.jpeg">
+					<img src="pic3.jpeg" alt="D3">
+				</a>
+			<div class="desc">At Dubai Design district</div>
+			</div>
+
+			<div class="gallery">
+				<a target="_blank" href="pic4.jpeg">
+					<img src="pic4.jpeg" alt="JBR">
+				</a>
+			<div class="desc">At JBR</div>
+			</div> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			
+			<div class="gallery">
+			<a target="_blank" href="pic6.jpeg">
+					<img src="pic6.jpeg" alt="Burj Khalifa">
+				</a>
+				<div class="desc">Burj Khalifa</div>
+			</div>
+
+			<div class="gallery">
+				<a target="_blank" href="pic7.jpeg">
+					<img src="pic7.jpeg" alt="Louvre">
+				</a>
+			<div class="desc">At Louvre</div>
+			</div>
+
+			<div class="gallery">
+				<a target="_blank" href="pic8.jpeg">
+					<img src="pic8.jpeg" alt="friends">
+				</a>
+			<div class="desc">Friends</div>
+			</div>
+
+			<div class="gallery">
+				<a target="_blank" href="pic1.jpeg">
+					<img src="pic1.jpeg" alt="Bluewaters">
+				</a>
+			<div class="desc">Blue Waters Island</div>
+			</div>
+			
+		</div>
+	</div>	
+</div>
+
+
+<div width="100%" style="background-color:black;color:white;">
+	<div class="w3-content w3-container w3-padding-64" id="contact">
+		<h3 class="w3-center">WHERE I STUDY!</h3>
+		<p class="w3-center"><em>I'd love your feedback!</em></p>
+		<div class="w3-row w3-padding-32 w3-section">
+			<div class="w3-col m4 w3-container">
+				<div class="mapouter">
+					<div class="gmap_canvas">
+						<iframe width="700" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=University%20of%20Wollongong%2C%20Dubai&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+						<a href="https://www.embedgooglemap.net/blog/purevpn-coupon/"> 
+						</a>
+					</div>
+				</div>
+			</div>
+					
+			<div class="w3-col m8 w3-panel">
+				<div class="w3-large w3-margin-bottom">
+					<i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Dubai, United Arab Emirates<br>
+					<i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +971 50 1234567<br>
+					<i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: hrk694@uowmail.edu.au<br>
+				</div>
+		  
+				<p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+		  
+				<form action="/action_page.php" target="_blank" onSubmit="return validateform()">
+					<div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+						<div class="w3-half">
+							<input class="w3-input w3-border" id="name" type="text" placeholder="Name" required name="Name">
+						</div>
+						<div class="w3-half">
+							<input class="w3-input w3-border" id="email" type="text" placeholder="Email" required name="Email">
+						</div>
+					</div>
+					<input class="w3-input w3-border" id="message" type="text" placeholder="Message" required name="Message">
+					<button class="w3-button w3-black w3-right w3-section" type="submit">
+						<i class="fa fa-paper-plane"></i> SEND MESSAGE
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+
+<script>
+function validateform() {
+ var email = document.getElementById("email").value;
+if(/^([a-z]|[A-Z]|[0-9]|.)+@([a-z]|[A-Z])+(\.)[a-z]{2,3}$/.test(email) == false){
+ alert("email does not match the pattern");
+ return false;
+}
+return true;
+}
+
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+function openNav1() {
+  document.getElementById("myNav1").style.width = "100%";
+}
+
+function closeNav1() {
+  document.getElementById("myNav1").style.width = "0%";
+}
+
+window.onscroll = function() { myFunction() };
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./resume.xsl"?>
+<!DOCTYPE Resume[
+ <!ELEMENT Resume (name, phone, email, Address, objective, education, skills, volexperience*, internship*, achievements*)>
+ <!ELEMENT name (#PCDATA)>
+ <!ELEMENT phone (#PCDATA)>
+ <!ELEMENT Address (#PCDATA)>
+ <!ELEMENT objective (#PCDATA)>
+ <!ELEMENT education (#PCDATA)>
+ <!ELEMENT skills (#PCDATA)>
+ <!ELEMENT volexperience (volexp)>
+ <!ELEMENT internship (work)>
+ <!ELEMENT achievements (achieve)>
+ <!ELEMENT volexp (#PCDATA)>
+ <!ELEMENT work (#PCDATA)>
+ <!ELEMENT achieve (#PCDATA)>
+]>
+
+<Resume>
+
+<name> HIMAJA KAKADE </name>
+
+<phone> 050-8430976 </phone>
+
+<email> himaja.kakade@gmail.com </email>
+
+<Address> DG1L3, Adwea Colony, Ruwais, Abu Dhabi, UAE</Address>
+
+<objective> To inculcate globalized skills and lead a vision of achieving organizational and interpersonal goals with efficiency and effectiveness.
+</objective>
+
+<education> 
+Currently graduated in Bachelors of Information Technology, Major: Management Information Systems University of Wollongong, Dubai
+graduation: June 2021
+</education>
+
+<skills>
+•Self-motivated and keen learner 
+•Creative and result oriented
+•Collaborative and efficient
+•Organized, Supportive and responsible. 
+•Programming Languages: Java,  C++, HTML,  XML, Shell
+•Database language: SQL
+•Proficient in Microsoft Office (MS Word, Excel, PowerPoint).
+</skills>
+
+<volexperience>
+<volexp>
+Volunteered in Literature fest sponsored by Emirates (2018)
+</volexp>
+</volexperience>
+
+<volexperience>
+<volexp>
+Marshalling in University graduation ceremony (2018)
+</volexp>
+</volexperience>
+
+<volexperience>
+<volexp>
+Communications officer of India Club at University
+</volexp>
+</volexperience>
+
+<internship>
+<work>
+IT intern for 2 months for Al Shirawi Group.
+</work>
+</internship>
+
+<internship>
+<work>
+Learning outcome:
+</work>
+</internship>
+
+<internship>
+<work>
+1. Writing SQL Queries 
+</work>
+</internship>
+
+<internship>
+<work>
+2. Creating data models and establishing BI Reports
+</work>
+</internship>
+
+<internship>
+<work>
+3. Updating current employee information
+</work>
+</internship>
+
+<internship>
+<work>
+4. Managing current employees 
+</work>
+</internship>
+
+<internship>
+<work>
+5. To add newly hired employee details
+</work>
+</internship>
+
+<internship>
+<work>
+6. Creating value sets and new elements
+</work>
+</internship>
+
+<internship>
+<work>
+7. Creating lookup types
+</work>
+</internship>
+
+<achievements>
+<achieve>
+Earned 1st position at the Science Innovation Exhibition in School  
+</achieve>
+</achievements> 
+
+<achievements>
+<achieve>
+Participated in several Science Olympiads
+</achieve>
+</achievements>  
+ 
+<achievements>
+<achieve>
+Academic scholarship in university  
+</achieve>
+</achievements> 
+
+<achievements>
+<achieve>
+Academic excellence in high school 
+</achieve>
+</achievements> 
+
+<achievements>
+<achieve>
+Dean’s Merit List 2018   
+</achieve>
+</achievements> 
+
+</Resume>
+

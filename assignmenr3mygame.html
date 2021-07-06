@@ -1,0 +1,73 @@
+<html>
+
+
+<body>
+
+<button onclick="startgame();"> Start Game </button>
+<button onclick="stopGame();"> Stop Game </button>
+
+<h1> Your chose number is: <span style="color: green;" id="number"> 0</span> </h1>
+<h2> Your score so far: <span style="color: red;" id="score">0</span> </h2>
+
+<span id="number1" style="font-size:100; color: red;" onclick="check('number1');">  </span> &emsp;&emsp; <span id="number2" style="font-size:100; color: orange;" onclick="check('number2');">   </span> &emsp;&emsp;<span id="number3" style="font-size:100; color: blue;" onclick="check('number3');">   </span> 
+
+</body>
+
+<script>
+var score = 0;
+var refreshInterval;
+
+function startgame()
+{
+document.getElementById("score").innerHTML = "0";
+document.getElementById("number").innerHTML = "0";
+var number = prompt('Enter a number between 0 and 9');
+if(number >=0 && number<=9)
+{
+document.getElementById("number").innerHTML = number;
+refreshInterval = setInterval(game, 1000);
+}
+else
+alert("Enter a number between 0 and 9 !!!");
+}
+
+function game()
+{
+document.getElementById("number1").innerHTML = getRandomNumber();
+
+document.getElementById("number2").innerHTML = getRandomNumber();
+
+document.getElementById("number3").innerHTML = getRandomNumber(); 
+}
+
+function getRandomNumber() {
+number = Math.floor(Math.random()*10);
+console.log(number);
+return number;
+}
+
+function stopGame()
+{
+clearInterval(refreshInterval);
+}
+
+function check(id)
+{
+var n = document.getElementById(id).textContent;
+var num = document.getElementById("number").textContent;
+if (n == num)
+{
+score++;
+}
+else 
+{
+score--;
+}
+document.getElementById("score").innerHTML = score;
+}
+
+
+
+</script>
+
+</html>

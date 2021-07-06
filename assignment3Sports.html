@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body,h1,h2,h3,h4,h5 {
+font-family: "Raleway", sans-serif
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+background: #f2f2f2;
+font-family: 'Open Sans', sans-serif;
+}
+
+.center {
+position: absolute;
+top: 260%;
+left: 68%;
+transform: translate(-50%, -50%);
+width:100%; 
+}
+
+img {
+  vertical-align: middle;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.cursor {
+  cursor: pointer;
+}
+
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.button5{
+width:250px;
+height:45px;
+border:none;
+outline:none;
+box-shadow:-4px 4px 5px 0 #feb361;
+color:#fff;
+font-size:14px;
+text-shadow:0 1px rgba(0,0,0,0.4);
+background-color:black;
+border-radius:3px;
+font-weight:700
+}
+
+.button5:hover{
+background-color:#FF8000;
+cursor:pointer
+}
+
+.button5:active{
+margin-left:-4px;
+margin-bottom:-4px;
+padding-top:2px;
+box-shadow:none
+}
+</style>
+
+<body style="background-image:url(https://img.freepik.com/free-photo/gray-textures-background_74190-4600.jpg?size=626&ext=jpg)">
+
+
+<div class="w3-content" style="max-width:1400px">
+	<header class="w3-container w3-center w3-padding-32" > 
+		<h1><b><span class="w3-tag" >SPORTS</span></b></h1>
+		<h3>I enjoy a variety of sports including basketball, badminton, swimming, etc! </h3>
+	</header>
+	
+	<h2 style="text-align:center">Sport Slideshow Gallery</h2>
+
+	<div class="container">
+		  <div class="mySlides">
+			<div class="numbertext">1 / 6</div>
+			<img src="https://www.highlandradio.com/wp-content/uploads/2019/09/basketball.jpg" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			<div class="numbertext">2 / 6</div>
+			<img src="https://www.fcbarcelona.com/photo-resources/2019/03/22/2f927188-7197-4f4b-aff0-4c379d88b52d/Messi-jugada.jpg?width=1200&height=750" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			<div class="numbertext">3 / 6</div>
+			<img src="https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77702050475.jpg" style="width:100%">
+		  </div>
+			
+		  <div class="mySlides">
+			<div class="numbertext">4 / 6</div>
+			<img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201907/2019-07-02T144737Z_1081712672_.png?3nVKsQkfY90YoVTxlHQTCPAEhl_L1ukS" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			<div class="numbertext">5 / 6</div>
+			<img src="https://www.sportsmatters.tv/wp-content/uploads/2019/01/163_SD_01292019hm_4050-1d1e3a66789c097da2d6b6368532e7db.jpg" style="width:100%">
+		  </div>
+			
+		  <div class="mySlides">
+			<div class="numbertext">6 / 6</div>
+			<img src="https://i.ytimg.com/vi/gv5zXPLuCYs/maxresdefault.jpg" style="width:100%">
+		  </div>
+			
+		  <a class="prev" onclick="plusSlides(-1)"><</a>
+		  <a class="next" onclick="plusSlides(1)">></a>
+
+		  <div class="caption-container">
+			<p id="caption"></p>
+		  </div>
+
+		  <div class="row">
+			<div class="column">
+			  <img class="demo cursor" src="https://www.highlandradio.com/wp-content/uploads/2019/09/basketball.jpg" style="width:100%;" onclick="currentSlide(1)" alt="My favourite sport!">
+			</div>
+			<div class="column">
+			  <img class="demo cursor" src="https://www.fcbarcelona.com/photo-resources/2019/03/22/2f927188-7197-4f4b-aff0-4c379d88b52d/Messi-jugada.jpg?width=1200&height=750" style="width:100%;" onclick="currentSlide(2)" alt="Football">
+			</div>
+			<div class="column">
+			  <img class="demo cursor" src="https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77702050475.jpg" style="width:100%;" onclick="currentSlide(3)" alt="Roger Fedrer">
+			</div>
+			<div class="column">
+			  <img class="demo cursor" src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201907/2019-07-02T144737Z_1081712672_.png?3nVKsQkfY90YoVTxlHQTCPAEhl_L1ukS" style="width:100%;" onclick="currentSlide(4)" alt="Indian cricket team">
+			</div>
+			<div class="column">
+			  <img class="demo cursor" src="https://www.sportsmatters.tv/wp-content/uploads/2019/01/163_SD_01292019hm_4050-1d1e3a66789c097da2d6b6368532e7db.jpg" style="width:100%;" onclick="currentSlide(5)" alt="Daniel Bryan with the Championship belt">
+			</div>    
+			<div class="column">
+			  <img class="demo cursor" src="https://i.ytimg.com/vi/gv5zXPLuCYs/maxresdefault.jpg" style="width:100%;" onclick="currentSlide(6)" alt="Sania Nehwal, When she held the world's Number one spot for Badminton">
+			</div>
+		  </div>
+	</div> <br/><br/><br/>
+	
+	<h2 align="center"> KNOW MORE ABOUT YOUR FAVOURITE SPORT! </h2> <br/><br/><br/><br/>
+	
+	<div class="center">
+		<div class="w3-row">
+			<div class="w3-col l8 s12">
+				<div class="w3-card-4 w3-margin w3-white" style="background-image:url(https://ak8.picdn.net/shutterstock/videos/636958/thumb/1.jpg)">
+					<img src="https://en.unesco.org/sites/default/files/styles/commemoration_header/public/commemorations/shutterstock_599738306.jpg?itok=uwCK97T9"  style="width:100%">
+					<div class="w3-container" >
+						<h3 align="center"><b>SPORT ACTIVITIES</b></h3>
+						<p align="center"> WHAT'S YOUR FAVOURITE SPORT? </p>
+					</div>
+
+					<div class="w3-container"> 
+						<form action="https://www.bbc.co.uk/search?" style="color: white;">
+						<p align="center"> <input type="submit" class="button5" value="FIND OUT THE LATEST NEWS !"> </p> <br/>
+						<input type="radio" name="q" value="basketball"> Basketball<br/>
+						<input type="radio" name="q" value="badminton"> Badminton<br/>
+						<input type="radio" name="q" value="Tennis"> Tennis<br/>
+						<input type="radio" name="q" value="Swimming"> Swimming<br/>
+						<input type="radio" name="q" value="Cricket"> Cricket<br/>
+						<input type="radio" name="q" value="Wrestling"> Wrestling<br/>
+						<input type="radio" name="q" value="Football"> Football<br/><br/>
+						</form> <br/> <br/>
+						<button class="w3-button w3-black w3-right w3-section" type="submit">
+						<i class="fa fa-paper-plane"></i>
+						<a href="./HOMEPAGE.html"> GO BACK
+						</a>
+						</button>
+					</div>
+				</div> <hr>
+			</div>
+		</div>
+	<div>
+</div> 
+
+
+
+</body>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</html>

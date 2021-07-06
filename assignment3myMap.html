@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+h1{
+color: white;
+text-align: center;
+font-family:Raleway, sans-serif;
+}
+
+body{
+background-color: salmon;
+}
+
+h2{
+font-family: Lato;
+}
+
+.container { 
+width: 75%;
+height: 100%; 
+padding-top: 45px; /* Top as suggested by t.niese */ 
+padding-left: 45px; /* Adjust the value as needed to get it to be centered */ 
+}
+</style>
+
+<body>
+
+<div width="100%" style="background-color: black; padding: 2px;">
+<h1>Find out more about My Favourite Food & places I visited by clicking on The Map </h1>
+</div>
+
+<!-- //<img src="https://i.pinimg.com/originals/14/c6/28/14c628fe0c3e119feb376a14d11060aa.png" alt="" usemap="#map1575304579061" width="70%" height="690" align="left" /> -->
+<img src="mymap.jpg" usemap="#image-map" align="left" />
+<img src="https://www.health.harvard.edu/media/content/images/p3_MedDiet_W1806_gi667751254.jpg" width="21%" height="858" style="object-fit:cover;"/>
+<map name="image-map" id="image-map">
+    <area target="_blank" alt="India" title="India" href="https://www.thespruceeats.com/popular-indian-dishes-1957891" coords="807,471,17" shape="circle">
+    <area target="_blank" alt="London" title="London" href="https://freetoursbyfoot.com/top-10-british-foods-london/" coords="566,339,11" shape="circle">
+    <area target="_blank" alt="United states" title="United states" href="https://www.traveller.com.au/the-traveller-10-musttry-american-food-gqbjjm" coords="252,380,32" shape="circle">
+    <area target="_blank" alt="Turkey" title="Turkey" href="https://traveltriangle.com/blog/turkish-foods/" coords="681,386,15" shape="circle">
+    <area target="_blank" alt="Germany" title="Germany" href="https://spoonuniversity.com/lifestyle/6-german-chocolate-brands-to-try" coords="602,338,18" shape="circle">
+</map>
+	
+<div style="text-align:center;">	
+<button class="w3-button w3-white w3-center w3-section" type="submit">
+	<i class="fa fa-paper-plane"></i>
+	<a href="./HOMEPAGE.html"><i style="color:black;">GO BACK</i>
+	</a>
+</button>	<br /><br />
+</div>
+	
+<h2 style="text-align: center;"> COMMENTS </h2>	
+
+	  <script type="text/javascript">
+	  	
+	  	//db is created when webpage opened
+	  	// all below is called then
+
+	  	var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+	  	
+	  	db.transaction(function (tx) { 
+			   tx.executeSql('CREATE TABLE IF NOT EXISTS COMMENTS (id INTEGER PRIMARY KEY, NAME TEXT, MESSAGE VARCHAR)');
+			});
+
+
+	  	db.transaction( function (tx) {
+
+	  		tx.executeSql('SELECT * FROM COMMENTS', [], function (tx, results) { 
+		      
+			      var len = results.rows.length;
+			      var i; 
+			  
+			      for (i = 0; i < len; i++) //Display previously created notes
+			      {
+							createNewComment(results.rows.item(i).NAME, results.rows.item(i).MESSAGE);
+			      }
+	  
+	   		}, null);
+
+	  	});
+
+	  </script>
+
+	</head>
+
+	<body>
+		
+		<div class="container" id="InputSection">
+
+			<h2>Leave a Comment on the website!!</h2><br>
+							  <div style="text-align:right;">
+				  <input type="text" size="30" id="searchname">
+				  <button class="btn btn-danger" style="background-color: maroon;" type="button" onclick="ViewDatabase()">Search</button>
+				  </div>
+
+			<form>
+			  <div class="form-group">
+			      <label>Name</label>
+			      <input type="text" class="form-control" id="Name" name="Name">
+    		  </div>
+
+    		  <div class="form-group">
+				  <label>Message</label><br>
+				  <textarea class="form-control" rows="5" cols="50" name="Message" id="Message"></textarea><br>
+			  </div>
+
+			  <div class="text-right">
+				  <button class="btn btn-success" type="button" onclick="addComment()">Add Comment</button><br><br>
+				  <button class="btn btn-danger" style="background-color: maroon;" type="button" onclick="allData()">All comments</button> <br /> <br /><br /><br />
+			  </div>
+
+			</form>
+
+		</div>
+
+		<div  style="border: 1px solid black;background-color: white; width: 50%; font-size: 150%;" width="50%" class="container" >
+		<p align="center"> COMMENT SECTION  </p>
+		<div id="OutputSection"> </div>
+		</div>
+
+		<script type="text/javascript">
+			
+			function addComment()
+			{
+				var Name = document.getElementById("Name").value;
+				var Message =  document.getElementById("Message").value;
+				var query = `INSERT INTO COMMENTS (NAME, MESSAGE) VALUES ("${Name}", "${Message}")`;
+				alert(query);	//alert msg of what user typed into the form ^
+
+				db.transaction(function (tx) { 
+
+			   		tx.executeSql(query);	//place topic and comment in db table
+			
+				});
+
+				createNewComment(Name, Message);	//create new comment; creates <p> that displays my topic and comment below the form
+
+				resetInput();	//reset the form
+			}
+
+			function createNewComment(Name, Message)
+			{
+				var paragraph = document.createElement("p");
+				paragraph.innerHTML = `<b>${Name}</b> - ${Message}<br><br>`;
+				document.getElementById("OutputSection").appendChild(paragraph);	
+				console.log("Output Section: "+document.getElementById("OutputSection").innerHTML);
+			}
+			
+
+			function resetInput()	
+			{
+				document.getElementById("Name").value = "";
+				document.getElementById("Message").value = "";
+			}
+
+		
+			
+			function ViewDatabase(){
+					var name = document.getElementById("searchname").value;
+				 db.transaction( function (tx) {
+				 tx.executeSql('SELECT * FROM COMMENTS WHERE NAME=?;',[name],processResult);
+			}
+			);
+			}
+			
+			function allData()
+			{
+				 db.transaction( function (tx) {
+				 tx.executeSql('SELECT * FROM COMMENTS',[],processResult);
+			}
+			);
+			}
+			
+			
+			function processResult(tx, results){
+			DisplayNote(results);
+				}
+
+			function DisplayNote(results)
+			{
+			var html = "";
+			 for (var i=0; i<results.rows.length; i++) {
+			 var row = results.rows.item(i);
+			 document.getElementById("OutputSection").innerHTML="";
+			 html += "<b>" + row.NAME +"</b>"+ " "+"-"+" "+row.MESSAGE+"<br />"+"<br />";
+			 }
+			document.getElementById("OutputSection").innerHTML=html;
+			}
+
+		</script>
+
+</body>
+</html>
+

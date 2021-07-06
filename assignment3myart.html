@@ -1,0 +1,85 @@
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+font-family: "Raleway", Arial, sans-serif}
+.w3-row img {margin-bottom: -8px
+}
+</style>
+<body>
+
+
+<div class="w3-content" style="max-width:1500px">
+	<header class="w3-container w3-xlarge w3-padding-24">
+		<a href="#" class="w3-left w3-button w3-white">MY ART</a>
+		<button class="w3-button w3-black w3-right w3-section" style="position: absolute; left: 75%; top:1%;" type="submit">
+		<i class="fa fa-paper-plane"></i>
+		<a href="./HOMEPAGE.html"> GO BACK </a>
+	</button>
+		<a href="#description" class="w3-right w3-button w3-white">Description</a>
+	</header>
+
+	<div class="w3-row">
+		<div class="w3-half">
+			<img src="IMG_1351.jpg" style="width:100%" height="90%">
+			<img src="IMG_3774.jpg" style="width:100%">
+			<img src="IMG_3793.jpg" style="width:100%">
+		</div>
+		<div class="w3-half">
+			<img src="IMG_6343.jpg" style="width:100%">
+			<img src="IMG_6637.jpg" style="width:100%" height="105.8%">
+		</div>
+	</div>
+</div>
+	
+<footer class="w3-light-grey w3-padding-64 w3-center" id="description">
+	<h2>Description</h2>
+	<img src="IMG_6631.jpg" class="w3-image w3-padding-32" width="300" height="300">
+	<form style="margin:auto;width:60%" action="/action_page.php" target="_blank" onSubmit="return validateform()">
+		<p>I love doodling! Here's a few of them which i absolutely loved drawing! </p>
+		<p class="w3-large w3-text-pink">Leave a comment! Let me know what you think of them!</p>
+		<div class="w3-section">
+			<label><b>Name</b></label>
+			<input class="w3-input w3-border" type="text" required name="Name">
+		</div>
+		<div class="w3-section">
+			<label><b>Email</b></label>
+			<input class="w3-input w3-border" type="text" id="email" required name="Email">
+		</div>
+		<div class="w3-section">
+			<label><b>Message</b></label>
+			<input class="w3-input w3-border" required name="Message">
+		</div>
+		
+		<button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
+	</form>
+	<br>
+</footer>
+
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+</body>
+
+<script>
+function validateform() {
+ var email = document.getElementById("email").value;
+if(/^([a-z]|[A-Z]|[0-9]|.)+@([a-z]|[A-Z])+(\.)[a-z]{2,3}$/.test(email) == false){
+ alert("email does not match the pattern");
+ return false;
+}
+return true;
+}
+</script>
+</html>
